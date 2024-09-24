@@ -1,0 +1,14 @@
+<suite name="Practo">
+	<test name="Practo_edge">
+	<parameter name="x" value="edge"/>
+		<classes>
+			<class name="practo.Practotest"/>
+		</classes>
+	</test>
+	<test name="Practo_chrome">
+	<parameter name="x" value="chrome"/>
+		<classes>
+			<class name="practo.Practotest"/>
+		</classes>
+	</test>
+</suite>

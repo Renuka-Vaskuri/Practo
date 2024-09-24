@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Practo]">
+  <test thread-count="5" name="Practo_chrome(failed)">
+    <parameter name="x" value="chrome"/>
+    <classes>
+      <class name="practo.Practotest">
+        <methods>
+          <include name="setUp"/>
+          <include name="closeDriver"/>
+          <include name="appointment"/>
+          <include name="report"/>
+          <include name="flush"/>
+          <include name="driverSetUp"/>
+        </methods>
+      </class> <!-- practo.Practotest -->
+    </classes>
+  </test> <!-- Practo_chrome(failed) -->
+</suite> <!-- Failed suite [Practo] -->
