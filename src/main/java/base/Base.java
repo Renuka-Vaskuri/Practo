@@ -13,6 +13,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
 public class Base 
 {
 	public static WebDriver driver;
@@ -20,6 +21,7 @@ public class Base
 	public static ExtentReports report;
 	public static ExtentTest test;
 	public static Properties prop;
+	
 	public static void reportSetUp()  //reporter set up
 	{
 		htmlreport=new ExtentSparkReporter(new File("c:\\Practo\\ExtentReports.html"));
@@ -36,7 +38,7 @@ public class Base
 	@Parameters({"x"})
 	public static void driverSetUp(String br) throws Exception //driver set up
 	{
-		prop=new Properties();
+		prop=new Properties();  //taking properties from properties file
 		FileInputStream input = new FileInputStream("src/main/java/config/Practoconfig.properties");
 		prop.load(input);
 		if(br.matches("edge"))
@@ -48,17 +50,20 @@ public class Base
 			driver=new ChromeDriver();
 		}
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 	}
+	
 	public static void openUrl()
 	{
 		 String Url = prop.getProperty("url");
 		 driver.get(Url);
 	}
+	
 	public static void close()  //close browser
 	{
 		driver.close();
 	}
+	
 	public static void saveReport()  //save the report
 	{
 		report.flush();

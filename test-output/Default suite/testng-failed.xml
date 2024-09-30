@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practo.Practotest">
+      <class name="practo.PractoTest">
         <methods>
           <include name="setUp"/>
           <include name="closeDriver"/>
-          <include name="appointment"/>
-          <include name="homepage"/>
+          <include name="consultationFee"/>
           <include name="report"/>
+          <include name="homePage"/>
           <include name="flush"/>
-          <include name="fee"/>
           <include name="driverSetUp"/>
+          <include name="bookingSlots"/>
         </methods>
-      </class> <!-- practo.Practotest -->
+      </class> <!-- practo.PractoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

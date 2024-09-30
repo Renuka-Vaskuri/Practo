@@ -1,69 +1,49 @@
 package pages;
 
 import java.util.List;
+import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import base.Base;
 
 public class HomePage extends Base
 {
-	By locationBox=By.xpath("//*[@id=\"c-omni-container\"]/div/div[1]/div[1]/input");
-	By citySearch=By.xpath("//*[@id=\"c-omni-container\"]/div/div[1]/div[1]/input");
-	By cityClicked=By.xpath("//*[@id=\"c-omni-container\"]/div/div[1]/div[2]/div[2]/div[3]/span/div[1]");
-	By selectSpecialization=By.xpath("//*[@id=\"c-omni-container\"]/div/div[2]/div[2]/div/div[2]/span[1]/div");
-	By cityShow=By.xpath("//*[@id=\"container\"]/div/div[4]/div/div[1]/div/div[1]/div[1]/h1");
-	By title=By.xpath("//span[text()=\"Gynecologist/Obstetrician\"]");
-	List<WebElement> specialities;
-	public static String selectedSpecialization;
-	public static String displayedSpeciality;
-	public static String selectedCity;
+	By locationBox=By.xpath("//input[@placeholder=\"Search location\"]");
+	By cityOptions=By.xpath("//div[@class=\"c-omni-suggestion-group\"]/div/span/div[1]");
+	List<WebElement> cities;
+	By specializationOptions=By.xpath("//div[@class=\"c-omni-suggestion-group\"]/div/span/div");
+	List<WebElement> specializations;
 	
-	public void select(String typeCity) throws Exception
+	public static String selectedSpecialization;
+    public static String selectedCity;
+	
+	public void select() throws Exception
 	{
-		driver.findElement(locationBox).clear();    //clears the value in city search box
-		Thread.sleep(2000);
-		driver.findElement(citySearch).sendKeys(typeCity);   //typeCity parameter takes city value 
-		Thread.sleep(2000);
-//		search.sendKeys(Keys.ARROW_DOWN);  //selecting the third option as city
-//		search.sendKeys(Keys.ARROW_DOWN);
-//		search.sendKeys(Keys.ARROW_DOWN);
-//		search.sendKeys(Keys.ENTER);
-		WebElement city=driver.findElement(cityClicked);   //select the city
+		WebElement search=driver.findElement(locationBox);		//clears the value in city search box
+		search.clear();
+		Thread.sleep(4000);
+		String citySelect = prop.getProperty("city");		//types city name given in properties file to search
+		search.sendKeys(citySelect);
+		Thread.sleep(4000);
+		
+		cities=driver.findElements(cityOptions);
+		Thread.sleep(3000);
+		Assert.assertTrue(cities.size()>1,"There are no cities to select.");	//checking whether there are more than one city or not
+		Random random=new Random();		//selects one city randomly
+		int randomIndex=random.nextInt(cities.size()-1)+1;
+		WebElement city=cities.get(randomIndex);
 		selectedCity=city.getText();
 		city.click();
 		Thread.sleep(4000);
-//		speciality.sendKeys(Keys.ARROW_DOWN);
-//		speciality.sendKeys(Keys.ARROW_DOWN);
-//		speciality.sendKeys(Keys.ENTER);
-		WebElement speciality=driver.findElement(selectSpecialization);   //selecting  required specialization
+		specializations=driver.findElements(specializationOptions);	
+		Thread.sleep(3000);
+		Assert.assertTrue(specializations.size()>1,"There are no specializations to select.");	//checking whether there are more than one specialization in selected city or not
+		Random random1=new Random();		//selects one specialization randomly
+		int randomIndex1=random1.nextInt(specializations.size()-1)+1;
+		WebElement speciality=specializations.get(randomIndex1);
 		selectedSpecialization=speciality.getText();
 		speciality.click();
-		Thread.sleep(2000);
-	}
-	public boolean verifySpecialization() throws Exception
-	{
-		boolean allMatch=true;   //initializing allMatch variable as true
-		specialities=driver.findElements(title);   //finds list of elements
-		Thread.sleep(5000);
-		for (WebElement w:specialities)   //checks selected specialization and displayed doctors specialization same or not
-		{
-			displayedSpeciality=w.getText();
-			if (!displayedSpeciality.trim().equalsIgnoreCase(selectedSpecialization.trim()))   //returns false if not matched
-			{
-				allMatch=false;
-				break;
-			}
-		}
-		return allMatch;
-	}
-	public boolean verifyCity() throws Exception   //checks whether displayed doctors are from selected city or not
-	{
-		boolean cityMatch=false;
-		String displayedCity=driver.findElement(cityShow).getText();
-		if ((displayedCity.toLowerCase()).contains(selectedCity.toLowerCase()))
-		{
-			cityMatch=true;  //return true if displayed doctors are from selected city
-		}
-		return cityMatch;
+		Thread.sleep(4000);
 	}
 }

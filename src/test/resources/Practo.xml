@@ -1,14 +1,19 @@
 <suite name="Practo">
+	<listeners>
+        <listener class-name="practo.PractoTestListener"/>
+        <listener class-name="practo.PractoSuiteListener"/>
+        <listener class-name="practo.PractoReporter"/>
+    </listeners>
 	<test name="Practo_edge">
 	<parameter name="x" value="edge"/>
 		<classes>
-			<class name="practo.Practotest"/>
+			<class name="practo.PractoTest"/>
 		</classes>
 	</test>
 	<test name="Practo_chrome">
 	<parameter name="x" value="chrome"/>
 		<classes>
-			<class name="practo.Practotest"/>
+			<class name="practo.PractoTest"/>
 		</classes>
 	</test>
 </suite>

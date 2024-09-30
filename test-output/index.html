@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  2 skipped,  3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,10 +104,29 @@
                     <div class="method-list-content failed suite-Practo">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="appointment">appointment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="homePage">homePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Practo -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Practo" class="hide-methods skipped suite-Practo"> (hide)</a> <!-- hide-methods skipped suite-Practo -->
+                      <a href="#" panel-name="suite-Practo" class="show-methods skipped suite-Practo"> (show)</a> <!-- show-methods skipped suite-Practo -->
+                    </span>
+                    <div class="method-list-content skipped suite-Practo">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="bookingSlots">bookingSlots</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="consultationFee">consultationFee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Practo -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,27 +137,17 @@
                     <div class="method-list-content passed suite-Practo">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="appointment">appointment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="bookingSlots">bookingSlots</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="fee">fee</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="consultationFee">consultationFee</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="fee">fee</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="homepage">homepage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practo" title="practo.Practotest" class="method navigator-link" hash-for-method="homepage">homepage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Practo" title="practo.PractoTest" class="method navigator-link" hash-for-method="homePage">homePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Practo -->
@@ -156,23 +165,24 @@
           <div class="suite-Practo-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">practo.Practotest</span>
+              <span class="class-name">practo.PractoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="appointment">
-                  </a> <!-- appointment -->
-                  <span class="method-name">appointment</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;container&quot;]/div/div[4]/div/div[1]/div/div[3]/div[1]/div/div[1]/div[2]/a/div/h2&quot;}
-  (Session info: chrome=129.0.6668.59)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <a name="homePage">
+                  </a> <!-- homePage -->
+                  <span class="method-name">homePage</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.60)
 Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b22e705fb03797de9e4d8a48cbae13f6, findElement {value=//*[@id=&quot;container&quot;]/div/div[4]/div/div[1]/div/div[3]/div[1]/div/div[1]/div[2]/a/div/h2, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\RenukaV\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54549}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54549/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b22e705fb03797de9e4d8a48cbae13f6
+Command: [13b60f6d884a27b9bdd4355185f71ed5, sendKeysToElement {id=f.355ADE79957A85AE4C2E065B25C1680F.d.FC5C221C8FD96BD159764E409F659602.e.9, value=[Ljava.lang.CharSequence;@4f824872}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.60, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\RenukaV\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56948/devtoo..., se:cdpVersion: 129.0.6668.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (13b60f6d884a27b9bdd4355185f71ed5)] -&gt; xpath: //input[@placeholder=&quot;Search location&quot;]]
+Session ID: 13b60f6d884a27b9bdd4355185f71ed5
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -180,12 +190,10 @@ Session ID: b22e705fb03797de9e4d8a48cbae13f6
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at pages.DoctorsPage.slot(DoctorsPage.java:30)
-	at practo.Practotest.appointment(Practotest.java:57)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at pages.HomePage.select(HomePage.java:27)
+	at practo.PractoTest.homePage(PractoTest.java:42)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -193,45 +201,101 @@ Session ID: b22e705fb03797de9e4d8a48cbae13f6
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Practo-class-failed -->
-          <div class="suite-Practo-class-passed">
+          <div class="suite-Practo-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">practo.Practotest</span>
+              <img src="skipped.png"/>
+              <span class="class-name">practo.PractoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="appointment">
-                  </a> <!-- appointment -->
-                  <span class="method-name">appointment</span>
+                  <a name="bookingSlots">
+                  </a> <!-- bookingSlots -->
+                  <span class="method-name">bookingSlots</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.60)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [13b60f6d884a27b9bdd4355185f71ed5, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.60, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\RenukaV\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56948/devtoo..., se:cdpVersion: 129.0.6668.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 13b60f6d884a27b9bdd4355185f71ed5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+	at base.Base.close(Base.java:64)
+	at practo.PractoTest.closeDriver(PractoTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="fee">
-                  </a> <!-- fee -->
-                  <span class="method-name">fee</span>
+                  <a name="consultationFee">
+                  </a> <!-- consultationFee -->
+                  <span class="method-name">consultationFee</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.60)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [13b60f6d884a27b9bdd4355185f71ed5, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.60, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\RenukaV\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56948/devtoo..., se:cdpVersion: 129.0.6668.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 13b60f6d884a27b9bdd4355185f71ed5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+	at base.Base.close(Base.java:64)
+	at practo.PractoTest.closeDriver(PractoTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Practo-class-skipped -->
+          <div class="suite-Practo-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">practo.PractoTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="bookingSlots">
+                  </a> <!-- bookingSlots -->
+                  <span class="method-name">bookingSlots</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="fee">
-                  </a> <!-- fee -->
-                  <span class="method-name">fee</span>
+                  <a name="consultationFee">
+                  </a> <!-- consultationFee -->
+                  <span class="method-name">consultationFee</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="homepage">
-                  </a> <!-- homepage -->
-                  <span class="method-name">homepage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="homepage">
-                  </a> <!-- homepage -->
-                  <span class="method-name">homepage</span>
+                  <a name="homePage">
+                  </a> <!-- homePage -->
+                  <span class="method-name">homePage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,16 +310,21 @@ Session ID: b22e705fb03797de9e4d8a48cbae13f6
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Practo&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;practo.PractoTestListener&quot;/&gt;
+    &lt;listener class-name=&quot;practo.PractoSuiteListener&quot;/&gt;
+    &lt;listener class-name=&quot;practo.PractoReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Practo_edge&quot;&gt;
     &lt;parameter name=&quot;x&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;practo.Practotest&quot;/&gt;
+      &lt;class name=&quot;practo.PractoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Practo_edge --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Practo_chrome&quot;&gt;
     &lt;parameter name=&quot;x&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;practo.Practotest&quot;/&gt;
+      &lt;class name=&quot;practo.PractoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Practo_chrome --&gt;
 &lt;/suite&gt; &lt;!-- Practo --&gt;
@@ -300,34 +369,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'appointment')
-data.setCell(0, 2, 'practo.Practotest')
-data.setCell(0, 3, 30827);
+data.setCell(0, 1, 'bookingSlots')
+data.setCell(0, 2, 'practo.PractoTest')
+data.setCell(0, 3, 125520);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'appointment')
-data.setCell(1, 2, 'practo.Practotest')
-data.setCell(1, 3, 20359);
+data.setCell(1, 1, 'homePage')
+data.setCell(1, 2, 'practo.PractoTest')
+data.setCell(1, 3, 32079);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'homepage')
-data.setCell(2, 2, 'practo.Practotest')
-data.setCell(2, 3, 18106);
+data.setCell(2, 1, 'consultationFee')
+data.setCell(2, 2, 'practo.PractoTest')
+data.setCell(2, 3, 31847);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'homepage')
-data.setCell(3, 2, 'practo.Practotest')
-data.setCell(3, 3, 18068);
+data.setCell(3, 1, 'homePage')
+data.setCell(3, 2, 'practo.PractoTest')
+data.setCell(3, 3, 4260);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'fee')
-data.setCell(4, 2, 'practo.Practotest')
-data.setCell(4, 3, 13484);
+data.setCell(4, 1, 'consultationFee')
+data.setCell(4, 2, 'practo.PractoTest')
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'fee')
-data.setCell(5, 2, 'practo.Practotest')
-data.setCell(5, 3, 13048);
+data.setCell(5, 1, 'bookingSlots')
+data.setCell(5, 2, 'practo.PractoTest')
+data.setCell(5, 3, 0);
 window.suiteTableData['Practo']= { tableData: data, tableDiv: 'times-div-Practo'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Practo">
               </div> <!-- times-div-Practo -->
             </div> <!-- times-div -->
@@ -353,112 +422,114 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">practo.Practotest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">practo.PractoTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">report</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">driverSetUp(edge)</span>
-                <span class="method-start">343 ms</span>
+                <span class="method-start">302 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6030 ms</span>
+                <span class="method-start">5347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">homepage</span>
-                <span class="method-start">7516 ms</span>
+                <span class="method-name">homePage</span>
+                <span class="method-start">6946 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">25622 ms</span>
+                <span class="method-start">39027 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">driverSetUp(edge)</span>
-                <span class="method-start">25899 ms</span>
+                <span class="method-start">39306 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30841 ms</span>
+                <span class="method-start">44010 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">appointment</span>
-                <span class="method-start">32369 ms</span>
+                <span class="method-name">bookingSlots</span>
+                <span class="method-start">45711 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">52728 ms</span>
+                <span class="method-start">171234 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">driverSetUp(edge)</span>
-                <span class="method-start">52999 ms</span>
+                <span class="method-start">171433 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">58149 ms</span>
+                <span class="method-start">175994 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">fee</span>
-                <span class="method-start">59578 ms</span>
+                <span class="method-name">consultationFee</span>
+                <span class="method-start">177740 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">73064 ms</span>
+                <span class="method-start">209588 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">driverSetUp(chrome)</span>
-                <span class="method-start">73438 ms</span>
+                <span class="method-start">209900 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">76814 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">homepage</span>
-                <span class="method-start">79777 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeDriver</span>
-                <span class="method-start">97845 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">driverSetUp(chrome)</span>
-                <span class="method-start">98080 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">101093 ms</span>
+                <span class="method-start">214038 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">appointment</span>
-                <span class="method-start">102553 ms</span>
+                <span class="method-name">homePage</span>
+                <span class="method-start">216680 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">133391 ms</span>
+                <span class="method-start">220940 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">driverSetUp(chrome)</span>
-                <span class="method-start">133594 ms</span>
+                <span class="method-name">driverSetUp</span>
+                <span class="method-start">220996 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">137105 ms</span>
+                <span class="method-start">220996 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">fee</span>
-                <span class="method-start">138629 ms</span>
+                <span class="method-name">bookingSlots</span>
+                <span class="method-start">221012 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">151678 ms</span>
+                <span class="method-start">221018 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">221020 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">driverSetUp</span>
+                <span class="method-start">221020 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">consultationFee</span>
+                <span class="method-start">221027 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeDriver</span>
+                <span class="method-start">221033 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">flush</span>
-                <span class="method-start">151913 ms</span>
+                <span class="method-start">221191 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
